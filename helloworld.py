@@ -1,6 +1,8 @@
+import sys
 # Assignment 2
 
-print("Please enter your name.")
-name = input()
-
-print(f"Hello, " + name + "!")
+if len(sys.argv) < 2:
+    print("Usage: python helloWorld.py <name>")
+else:
+    name = " ".join(sys.argv[1:])
+    print(f"Hello, {name}!")
